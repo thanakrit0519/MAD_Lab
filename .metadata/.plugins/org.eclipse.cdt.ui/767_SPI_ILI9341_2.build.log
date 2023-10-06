@@ -1,0 +1,37 @@
+15:53:52 **** Incremental Build of configuration Debug for project 767_SPI_ILI9341_2 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F767xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/User/Downloads/767_SPI_ILI9341/767_SPI_ILI9341_2/Drivers/ILI9341" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:595:25: warning: implicit declaration of function 'display1' [-Wimplicit-function-declaration]
+  595 |                         display1();
+      |                         ^~~~~~~~
+../Core/Src/main.c:597:25: warning: implicit declaration of function 'display2' [-Wimplicit-function-declaration]
+  597 |                         display2();
+      |                         ^~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:695:6: warning: conflicting types for 'display1'; have 'void()'
+  695 | void display1() {
+      |      ^~~~~~~~
+../Core/Src/main.c:595:25: note: previous implicit declaration of 'display1' with type 'void()'
+  595 |                         display1();
+      |                         ^~~~~~~~
+../Core/Src/main.c:791:6: warning: conflicting types for 'display2'; have 'void()'
+  791 | void display2() {
+      |      ^~~~~~~~
+../Core/Src/main.c:597:25: note: previous implicit declaration of 'display2' with type 'void()'
+  597 |                         display2();
+      |                         ^~~~~~~~
+arm-none-eabi-gcc -o "767_SPI_ILI9341_2.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\User\Downloads\767_SPI_ILI9341\767_SPI_ILI9341_2\STM32F767ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="767_SPI_ILI9341_2.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 767_SPI_ILI9341_2.elf
+ 
+arm-none-eabi-size   767_SPI_ILI9341_2.elf 
+arm-none-eabi-objdump -h -S  767_SPI_ILI9341_2.elf  > "767_SPI_ILI9341_2.list"
+   text	   data	    bss	    dec	    hex	filename
+ 125688	    508	   2484	 128680	  1f6a8	767_SPI_ILI9341_2.elf
+Finished building: default.size.stdout
+ 
+Finished building: 767_SPI_ILI9341_2.list
+ 
+
+15:53:53 Build Finished. 0 errors, 4 warnings. (took 1s.178ms)
+

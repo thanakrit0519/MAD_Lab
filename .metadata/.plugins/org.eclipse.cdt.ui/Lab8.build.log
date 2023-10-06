@@ -1,0 +1,10 @@
+22:30:31 **** Incremental Build of configuration Debug for project Lab8 ****
+make -j12 all 
+arm-none-eabi-size   Lab8.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5180	     20	   1572	   6772	   1a74	Lab8.elf
+Finished building: default.size.stdout
+ 
+
+22:30:31 Build Finished. 0 errors, 0 warnings. (took 247ms)
+
